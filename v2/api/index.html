@@ -698,7 +698,7 @@
 <li><p><strong>详细</strong>：</p>
 <p>一个字符串模板作为 Vue 实例的标识使用。模板将会 <strong>替换</strong> 挂载的元素。挂载元素的内容都将被忽略，除非模板的内容有分发插槽。</p>
 <p>如果值以 <code>#</code> 开始，则它用作选项符，将使用匹配元素的 innerHTML 作为模板。常用的技巧是用 <code>&lt;script type=&quot;x-template&quot;&gt;</code> 包含模板。</p>
-<p class="tip">出于安全考虑，您应该只使用您信任的 Vue 模板。避免使用其他人生成的内容作为您的模板。</p>
+<p class="tip">出于安全考虑，你应该只使用你信任的 Vue 模板。避免使用其他人生成的内容作为你的模板。</p>
 
 <p class="tip">如果 Vue 选项中包含渲染函数，该模板将被忽略。</p>
 </li>
@@ -1444,7 +1444,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">  &#123;&#123; item.text &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>另外也可以为数组索引指定别名 (或者用于对象的键)：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(val, key) in object"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(val, key, index) in object"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>v-for</code> 默认行为试着不改变整体，而是替换元素。迫使其重新排序的元素，您需要提供一个 <code>key</code> 的特殊属性：</p>
+<p><code>v-for</code> 默认行为试着不改变整体，而是替换元素。迫使其重新排序的元素，你需要提供一个 <code>key</code> 的特殊属性：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>&gt;</span></div><div class="line">  &#123;&#123; item.text &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><code>v-for</code> 的详细用法可以通过以下链接查看教程详细说明。</p>
 </li>
@@ -1625,6 +1625,16 @@
 <p>详细用法，请参考下面指南部分的链接。</p>
 </li>
 <li><p><strong>参考</strong>：<a href="../guide/components.html#具名插槽">具名插槽</a></p>
+</li>
+</ul>
+<h3 id="slot-scope"><a href="#slot-scope" class="headerlink" title="slot-scope"></a>slot-scope</h3><ul>
+<li><p><strong>预期</strong>：<code>function argument expression</code></p>
+</li>
+<li><p><strong>用法</strong>：</p>
+<p>用于将元素或组件表示为作用域插槽。特性的值应该是可以出现在函数签名的参数位置的合法的 JavaScript 表达式。这意味着在支持的环境中，你还可以在表达式中使用 ES2015 解构。</p>
+<p>此属性不支持动态绑定。</p>
+</li>
+<li><p><strong>参考</strong>：<a href="../guide/components.html#作用域插槽">Scoped Slots</a></p>
 </li>
 </ul>
 <h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>
